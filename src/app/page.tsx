@@ -1,5 +1,6 @@
 import Banner from "@/components/main/banner/Banner";
 import CompanySilder from "@/components/main/companySlider/CompanySilder";
+import ProjectProposal from "@/components/main/projectProposal/ProjectProposal";
 import Services from "@/components/main/services/Services";
 
 const MainLayout = () => {
@@ -8,6 +9,7 @@ const MainLayout = () => {
       <Banner />
       <CompanySilder />
       <Services />
+      <ProjectProposal />
     </div>
   );
 };
