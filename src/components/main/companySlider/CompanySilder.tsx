@@ -1,10 +1,10 @@
 import Image from "next/image";
-import image1 from "../../../../public/iconSilder/1.png";
-import image2 from "../../../../public/iconSilder/2.png";
-import image3 from "../../../../public/iconSilder/3.png";
-import image4 from "../../../../public/iconSilder/4.png";
-import image5 from "../../../../public/iconSilder/5.png";
-import image6 from "../../../../public/iconSilder/6.png";
+import image1 from "../../../../public/images/iconSilder/1.png";
+import image2 from "../../../../public/images/iconSilder/2.png";
+import image3 from "../../../../public/images/iconSilder/3.png";
+import image4 from "../../../../public/images/iconSilder/4.png";
+import image5 from "../../../../public/images/iconSilder/5.png";
+import image6 from "../../../../public/images/iconSilder/6.png";
 
 import "./style.css";
 
@@ -25,8 +25,8 @@ const CompanySilder = () => {
           {images.map((img) => (
             <div key={img.id} className="marquee-item">
               <Image
-                src={img.image}
-                alt={img.name}
+                src={img?.image}
+                alt={img?.name || "image"}
                 width={100}
                 height={100}
                 className="object-contain"

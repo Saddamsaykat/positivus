@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const navItem = [
     { name: "About Us", path: "/aboutUs" },
-    { name: "Services", path: "/services" },
+    { name: "Services", path: "/service" },
     { name: "Use Cases", path: "/useCases" },
     { name: "Pricing", path: "/pricing" },
     { name: "Blog", path: "/blog" },

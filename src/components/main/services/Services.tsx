@@ -1,42 +1,46 @@
-import Image from "next/image"
-import cardImage1 from "../../../../public/images/servicesImages/1.png"
-import cardImage2 from "../../../../public/images/servicesImages/2.png"
-import cardImage3 from "../../../../public/images/servicesImages/3.png"
-import cardImage4 from "../../../../public/images/servicesImages/4.png"
-import cardImage5 from "../../../../public/images/servicesImages/5.png"
-import cardImage6 from "../../../../public/images/servicesImages/6.png"
+import Image from "next/image";
+import cardImage1 from "../../../../public/images/servicesImages/1.png";
+import cardImage2 from "../../../../public/images/servicesImages/2.png";
+import cardImage3 from "../../../../public/images/servicesImages/3.png";
+import cardImage4 from "../../../../public/images/servicesImages/4.png";
+import cardImage5 from "../../../../public/images/servicesImages/5.png";
+import cardImage6 from "../../../../public/images/servicesImages/6.png";
+import Link from "next/link";
 
 const Services = () => {
-    const images = [
-        { id: 1, image: cardImage1, name: "image1" },
-        { id: 2, image: cardImage2, name: "image2" },
-        { id: 3, image: cardImage3, name: "image3" },
-        { id: 4, image: cardImage4, name: "image4" },
-        { id: 5, image: cardImage5, name: "image5" },
-        { id: 6, image: cardImage6, name: "image6" },
-    ]
-    return (
-        <div>
-            <div>
-                <h1>Services</h1>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {images.map((img) => (
-                        <div key={img.id} className="card w-96 bg-base-100 shadow-xl">
-                            <figure><Image src={img.image} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Shoes!</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Buy Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+  const images = [
+    { id: 1, image: cardImage1, name: "image1" },
+    { id: 2, image: cardImage2, name: "image2" },
+    { id: 3, image: cardImage3, name: "image3" },
+    { id: 4, image: cardImage4, name: "image4" },
+    { id: 5, image: cardImage5, name: "image5" },
+    { id: 6, image: cardImage6, name: "image6" },
+  ];
+  return (
+    <div className="mt-12 mb-12">
+      <div className="flex gap-[40px]">
+        <h1 className="bg-[#B9FF66] rounded-[7px] text-[40px] px-[7px] font-medium">Services</h1>
+        <h3 className="text-[18px] font-medium max-w-[580px]">
+          At our digital marketing agency, we offer a range of services to help
+          businesses grow and succeed online. These services include:
+        </h3>
+      </div>
+      <div>
+        <Link href={"/service"} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-6">
+          {images.map((img) => (
+            <div key={img.id} className="flex items-center gap-4">
+              <Image
+                src={img?.image}
+                alt={img?.name || "image"}
+               className="w-full"
+              />
+              
             </div>
-            <div></div>
-        </div>
-    );
+          ))}
+        </Link>
+      </div>
+    </div>
+  );
 };
-
+ 
 export default Services;
