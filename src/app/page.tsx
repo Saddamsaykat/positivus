@@ -5,6 +5,7 @@ import OurworkingProcess from "@/components/main/ourworkingProcess/OurworkingPro
 import ProjectProposal from "@/components/main/projectProposal/ProjectProposal";
 import Services from "@/components/main/services/Services";
 import Team from "@/components/main/team/Team";
+import Testimonials from "@/components/main/testimonials/Testimonials";
 
 const MainLayout = () => {
   return (
@@ -16,6 +17,7 @@ const MainLayout = () => {
       <CaseStudies />
       <OurworkingProcess />
       <Team />
+      <Testimonials />
     </div>
   );
 };
