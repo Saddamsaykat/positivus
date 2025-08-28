@@ -1,7 +1,20 @@
+"use client"; // Important for Next.js 13+ app directory
+
+import { useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import bannerImage from "../../../../public/images/banner.png";
 
 const Banner = () => {
+  useEffect(() => {
+    // Only run on the client
+    AOS.init({
+      duration: 1200, // animation duration
+      once: true, // animate only once
+    });
+  }, []);
+
   return (
     <section className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-24">
@@ -9,14 +22,20 @@ const Banner = () => {
           {/* Left Content */}
           <div className="flex-1 flex flex-col justify-center lg:text-left">
             {/* Title */}
-            <h1 className="order-1 font-medium text-[44px] md:text-[44px] lg:text-[58px] xl:text-[60px] leading-tight text-black">
+            <h1
+              data-aos="fade-up"
+              className="order-1 font-medium text-[44px] md:text-[44px] lg:text-[58px] xl:text-[60px] leading-tight text-black"
+            >
               Navigating the <br />
               <span className="text-[#191A23]">digital landscape</span> <br />
               for success
             </h1>
 
-            {/* Image (comes second on mobile, stays right on desktop) */}
-            <div className="order-2 flex justify-center lg:hidden mt-6">
+            {/* Mobile Image */}
+            <div
+              data-aos="fade-up"
+              className="order-2 flex justify-center lg:hidden mt-6"
+            >
               <Image
                 src={bannerImage}
                 alt="imageBanner"
@@ -26,22 +45,29 @@ const Banner = () => {
             </div>
 
             {/* Subtitle */}
-            <h3 className="order-3 mt-6 font-normal text-[15px] sm:text-[17px] md:text-[19px] lg:text-[20px] text-gray-700 leading-relaxed max-w-[600px] mx-auto lg:mx-0">
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="order-3 mt-6 font-normal text-[15px] sm:text-[17px] md:text-[19px] lg:text-[20px] text-gray-700 leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+            >
               Our digital marketing agency helps businesses grow and succeed
               online through a range of services including SEO, PPC, social
               media marketing, and content creation.
             </h3>
 
             {/* Button */}
-            <div className="order-4 mt-8 w-full sm:w-auto">
+            <div data-aos="fade-up" data-aos-delay="400" className="order-4 mt-8 w-full sm:w-auto">
               <button className="w-full sm:w-auto bg-[#191A23] px-6 sm:px-8 md:px-10 lg:px-[35px] py-3 sm:py-4 md:py-5 lg:py-[20px] rounded-[14px] text-white font-normal text-base sm:text-lg md:text-xl lg:text-[20px] hover:bg-[#333] transition">
                 Book a consultation
               </button>
             </div>
           </div>
 
-          {/* Right Image for desktop only */}
-          <div className="flex-1 hidden lg:flex justify-end">
+          {/* Desktop Image */}
+          <div
+            data-aos="fade-left"
+            className="flex-1 hidden lg:flex justify-end"
+          >
             <Image
               src={bannerImage}
               alt="imageBanner"

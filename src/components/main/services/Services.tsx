@@ -18,23 +18,29 @@ const Services = () => {
   ];
   return (
     <div className="mt-12 mb-12">
-      <div className="flex gap-[40px]">
-        <h1 className="bg-[#B9FF66] rounded-[7px] text-[40px] px-[7px] font-medium">Services</h1>
-        <h3 className="text-[18px] font-medium max-w-[580px]">
+
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-[40px] items-center lg:items-start text-center lg:text-left">
+        <h1 className="bg-[#B9FF66] rounded-[7px] text-[28px] sm:text-[34px] lg:text-[40px] px-[7px]  font-medium">
+          Services
+        </h1>
+        <h3 className="text-[16px] sm:text-[18px] font-medium max-w-[380px] md:max-w-[580px] lg:max-w-[580px] ">
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </h3>
       </div>
+
       <div>
-        <Link href={"/service"} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-6">
+        <Link
+          href={"/service"}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-6"
+        >
           {images.map((img) => (
             <div key={img.id} className="flex items-center gap-4">
               <Image
                 src={img?.image}
                 alt={img?.name || "image"}
-               className="w-full"
+                className="w-full"
               />
-              
             </div>
           ))}
         </Link>
@@ -42,5 +48,5 @@ const Services = () => {
     </div>
   );
 };
- 
+
 export default Services;
