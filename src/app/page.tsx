@@ -4,6 +4,7 @@ import CompanySilder from "@/components/main/companySlider/CompanySilder";
 import OurworkingProcess from "@/components/main/ourworkingProcess/OurworkingProcess";
 import ProjectProposal from "@/components/main/projectProposal/ProjectProposal";
 import Services from "@/components/main/services/Services";
+import Team from "@/components/main/team/Team";
 
 const MainLayout = () => {
   return (
@@ -14,6 +15,7 @@ const MainLayout = () => {
       <ProjectProposal />
       <CaseStudies />
       <OurworkingProcess />
+      <Team />
     </div>
   );
 };
