@@ -1,27 +1,21 @@
-"use client"; // Important for Next.js 13+ app directory
-
-import { useEffect } from "react";
-import Image from "next/image";
-import AOS from "aos";
 import "aos/dist/aos.css";
+import AOS from "aos";
+import Image from "next/image";
 import bannerImage from "../../../../public/images/banner.png";
 
-const Banner = () => {
-  useEffect(() => {
-    // Only run on the client
-    AOS.init({
-      duration: 1200, // animation duration
-      once: true, // animate only once
-    });
-  }, []);
+if (typeof window !== "undefined") {
+  AOS.init({
+    duration: 1200,
+    once: true,
+  });
+}
 
+const Banner = () => {
   return (
     <section className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-24">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          {/* Left Content */}
           <div className="flex-1 flex flex-col justify-center lg:text-left">
-            {/* Title */}
             <h1
               data-aos="fade-up"
               className="order-1 font-medium text-[44px] md:text-[44px] lg:text-[58px] xl:text-[60px] leading-tight text-black"
@@ -31,11 +25,7 @@ const Banner = () => {
               for success
             </h1>
 
-            {/* Mobile Image */}
-            <div
-              data-aos="fade-up"
-              className="order-2 flex justify-center lg:hidden mt-6"
-            >
+            <div data-aos="fade-up" className="order-2 flex justify-center lg:hidden mt-6">
               <Image
                 src={bannerImage}
                 alt="imageBanner"
@@ -44,7 +34,6 @@ const Banner = () => {
               />
             </div>
 
-            {/* Subtitle */}
             <h3
               data-aos="fade-up"
               data-aos-delay="200"
@@ -55,7 +44,6 @@ const Banner = () => {
               media marketing, and content creation.
             </h3>
 
-            {/* Button */}
             <div data-aos="fade-up" data-aos-delay="400" className="order-4 mt-8 w-full sm:w-auto">
               <button className="w-full sm:w-auto bg-[#191A23] px-6 sm:px-8 md:px-10 lg:px-[35px] py-3 sm:py-4 md:py-5 lg:py-[20px] rounded-[14px] text-white font-normal text-base sm:text-lg md:text-xl lg:text-[20px] hover:bg-[#333] transition">
                 Book a consultation
@@ -63,11 +51,7 @@ const Banner = () => {
             </div>
           </div>
 
-          {/* Desktop Image */}
-          <div
-            data-aos="fade-left"
-            className="flex-1 hidden lg:flex justify-end"
-          >
+          <div data-aos="fade-left" className="flex-1 hidden lg:flex justify-end">
             <Image
               src={bannerImage}
               alt="imageBanner"
