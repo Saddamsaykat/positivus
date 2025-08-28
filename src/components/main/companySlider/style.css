@@ -1,0 +1,39 @@
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  background: white;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  padding: 0 20px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-item img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.marquee-item img:hover {
+  filter: grayscale(0%);
+}
+

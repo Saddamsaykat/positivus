@@ -1,7 +1,11 @@
+import Banner from "@/components/main/banner/Banner";
+import CompanySilder from "@/components/main/companySlider/CompanySilder";
+
 const MainLayout = () => {
   return (
-    <div>
-      hello
+    <div className="mt-[80px]">
+      <Banner />
+      <CompanySilder />
     </div>
   );
 };
