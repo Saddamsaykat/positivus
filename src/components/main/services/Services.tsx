@@ -1,9 +1,10 @@
 "use client";
 
-import "aos/dist/aos.css";
-import AOS from "aos";
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 import cardImage1 from "../../../../public/images/servicesImages/1.png";
 import cardImage2 from "../../../../public/images/servicesImages/2.png";
@@ -13,11 +14,11 @@ import cardImage5 from "../../../../public/images/servicesImages/5.png";
 import cardImage6 from "../../../../public/images/servicesImages/6.png";
 import SectionHeader from "@/utils/SectionHeader";
 
-if (typeof window !== "undefined") {
-  AOS.init({ duration: 1000, once: true });
-}
-
 const ServicesClient = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
+
   const images = [
     { id: 1, image: cardImage1, name: "image1" },
     { id: 2, image: cardImage2, name: "image2" },
@@ -34,26 +35,18 @@ const ServicesClient = () => {
         description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
       />
 
-      <div>
-        <Link
-          href={"/service"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-6"
-        >
-          {images.map((img, index) => (
-            <div
-              key={img.id}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
-              className="flex items-center gap-4"
-            >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-6">
+        {images.map((img) => (
+          <Link href="/service" key={img.id}>
+            <div data-aos="zoom-in" className="flex items-center gap-4">
               <Image
                 src={img.image}
-                alt={img.name || "image"}
+                alt={img.name || "service image"}
                 className="w-full"
               />
             </div>
-          ))}
-        </Link>
+          </Link>
+        ))}
       </div>
     </div>
   );

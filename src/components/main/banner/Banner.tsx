@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
     once: true,
   });
 }
-
+ 
 const Banner = () => {
   return (
     <section className="w-full bg-white">
@@ -27,7 +27,10 @@ const Banner = () => {
               for success
             </h1>
 
-            <div data-aos="fade-up" className="order-2 flex justify-center lg:hidden mt-6">
+            <div
+              data-aos="fade-up"
+              className="order-2 flex justify-center lg:hidden mt-6"
+            >
               <Image
                 src={bannerImage}
                 alt="imageBanner"
@@ -38,7 +41,6 @@ const Banner = () => {
 
             <h3
               data-aos="fade-up"
-              data-aos-delay="200"
               className="order-3 mt-6 font-normal text-[15px] sm:text-[17px] md:text-[19px] lg:text-[20px] text-gray-700 leading-relaxed max-w-[600px] mx-auto lg:mx-0"
             >
               Our digital marketing agency helps businesses grow and succeed
@@ -46,14 +48,17 @@ const Banner = () => {
               media marketing, and content creation.
             </h3>
 
-            <div data-aos="fade-up" data-aos-delay="400" className="order-4 mt-8 w-full sm:w-auto">
+            <div data-aos="fade-up" className="order-4 mt-8 w-full sm:w-auto">
               <button className="w-full sm:w-auto bg-[#191A23] px-6 sm:px-8 md:px-10 lg:px-[35px] py-3 sm:py-4 md:py-5 lg:py-[20px] rounded-[14px] text-white font-normal text-base sm:text-lg md:text-xl lg:text-[20px] hover:bg-[#333] transition">
                 Book a consultation
               </button>
             </div>
           </div>
 
-          <div data-aos="fade-left" className="flex-1 hidden lg:flex justify-end">
+          <div
+            data-aos="fade-left"
+            className="flex-1 hidden lg:flex justify-end"
+          >
             <Image
               src={bannerImage}
               alt="imageBanner"

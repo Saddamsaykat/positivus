@@ -3,10 +3,10 @@ import React from "react";
 interface SectionHeaderProps {
   title: string;
   description: string;
-  titleBgColor?: string;
+  titleBgColor?: string
   titleAos?: string;
   descAos?: string;
-  descAosDelay?: number;
+  descAosDelay?: number
   maxWidth?: string;
 }
 
@@ -23,7 +23,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     <div className="flex flex-col lg:flex-row gap-6 lg:gap-[40px] items-center lg:items-start text-center lg:text-left">
       <h1
         data-aos={titleAos}
-        className={`bg-[${titleBgColor}] rounded-[7px] text-[28px] sm:text-[34px] lg:text-[40px] px-[7px] font-medium`}
+        style={{ backgroundColor: titleBgColor }}
+        className="rounded-[7px] text-[28px] sm:text-[34px] lg:text-[40px] px-[7px] font-medium"
       >
         {title}
       </h1>
