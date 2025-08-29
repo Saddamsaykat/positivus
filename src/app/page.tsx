@@ -1,6 +1,7 @@
 import Banner from "@/components/main/banner/Banner";
 import CaseStudies from "@/components/main/caseStudies/CaseStudies";
 import CompanySilder from "@/components/main/companySlider/CompanySilder";
+import ContactUs from "@/components/main/contactUs/ContactUs";
 import OurworkingProcess from "@/components/main/ourworkingProcess/OurworkingProcess";
 import ProjectProposal from "@/components/main/projectProposal/ProjectProposal";
 import Services from "@/components/main/services/Services";
@@ -18,6 +19,7 @@ const MainLayout = () => {
       <OurworkingProcess />
       <Team />
       <Testimonials />
+      <ContactUs />
     </div>
   );
 };
