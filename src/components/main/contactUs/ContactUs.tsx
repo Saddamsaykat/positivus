@@ -76,7 +76,7 @@ const ContactUs = () => {
                   id="name"
                   placeholder="Name"
                   name="name"
-                  className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg bg-white placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-shadow"
+                  className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg text-black bg-white placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-shadow"
                 />
               </div>
 
@@ -93,7 +93,7 @@ const ContactUs = () => {
                   placeholder="Email"
                   name="email"
                   required
-                  className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg bg-white placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-shadow"
+                  className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg bg-white text-black placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-shadow"
                 />
               </div>
 
@@ -110,7 +110,7 @@ const ContactUs = () => {
                   required
                   rows={6}
                   name="message"
-                  className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg bg-white placeholder-gray-400 text-sm sm:text-base resize-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-shadow sm:rows-7 lg:rows-8"
+                  className="w-full px-3 py-2.5 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg bg-white text-black placeholder-gray-400 text-sm sm:text-base resize-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-shadow sm:rows-7 lg:rows-8"
                 />
               </div>
 
