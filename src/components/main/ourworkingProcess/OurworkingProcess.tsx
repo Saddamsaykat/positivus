@@ -76,7 +76,7 @@ const OurworkingProcess = () => {
               </h3>
               <div
                 className={`text-[1.3rem] transition-transform duration-300 flex items-center h-full bg-red-white ${
-                  activeIndex === step.index ? "text-[#191A23] bg-white" : ""
+                  activeIndex === step.index ? "" : ""
                 }`}
                 style={{
                   width: "28px",
@@ -90,7 +90,7 @@ const OurworkingProcess = () => {
                 }}
               >
                 {/* Conditional rendering of the icons */}
-                {activeIndex === step.index ? <FaMinus /> : <FaPlus />}
+                {activeIndex === step.index ? <FaMinus /> : <FaPlus className="text-black"/>}
               </div>
             </div>
 
