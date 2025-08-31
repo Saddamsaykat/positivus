@@ -3,7 +3,7 @@ import image from "../../../../public/images/projectProposal/projectProposal.png
 
 const ProjectProposal = () => {
   return (
-    <div className="relative w-full h-auto lg:h-[347px] px-6 sm:px-10 md:px-20 lg:px-[60px] flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-[275px] bg-[#f5f5f5] rounded-[45px] sm:max-w-[488px] lg:max-w-[1440px] container mx-auto">
+    <div className="relative w-full h-auto lg:h-[347px] px-6 sm:px-10 md:px-20 lg:px-[60px] flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-[275px] rounded-[45px] sm:max-w-[488px] lg:max-w-[1440px] container mx-auto">
       <div className="flex flex-col gap-6 sm:gap-[26px] max-w-full lg:max-w-[500px] h-auto lg:h-[227px] text-center lg:text-left">
         <h1 data-aos="fade-left" className="font-spaceGrotesk font-medium text-[24px] sm:text-[28px] lg:text-[30px] leading-[100%]">
           Let`s make things happen

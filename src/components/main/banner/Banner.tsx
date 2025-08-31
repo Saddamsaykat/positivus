@@ -22,10 +22,10 @@ const Banner = () => {
           <div className="flex-1 flex flex-col justify-center lg:text-left">
             <h1
               data-aos="fade-up"
-              className="order-1 font-medium text-[44px] md:text-[44px] lg:text-[58px] xl:text-[60px] leading-tight text-black"
+              className="order-1 font-medium text-[44px] md:text-[44px] lg:text-[58px] xl:text-[60px] leading-tight "
             >
               Navigating the <br />
-              <span className="text-[#191A23]">digital landscape</span> <br />
+              <span className="">digital landscape</span> <br />
               for success
             </h1>{" "}
             <div
@@ -41,7 +41,7 @@ const Banner = () => {
             </div>
             <h3
               data-aos="fade-up"
-              className="order-3 mt-6 font-normal text-[15px] sm:text-[17px] md:text-[19px] lg:text-[20px] text-gray-700 leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+              className="order-3 mt-6 font-normal text-[15px] sm:text-[17px] md:text-[19px] lg:text-[20px] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
             >
               Our digital marketing agency helps businesses grow and succeed
               online through a range of services including SEO, PPC, social
