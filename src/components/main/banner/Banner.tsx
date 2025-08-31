@@ -15,7 +15,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white">
+    <section className="w-full">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-4 py-12 sm:py-16 lg:py-4">
 
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">

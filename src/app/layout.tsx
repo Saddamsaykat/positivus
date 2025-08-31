@@ -3,6 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import ReduxProvider from "@/redux/lib/providers";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -25,9 +26,11 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} antialiased max-w-[1440px] container mx-auto`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <ReduxProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );
